@@ -1,0 +1,31 @@
+div{
+    text-align: center;
+}
+
+h1{
+    font-family: verdana;
+}
+
+.paras{
+    font-family: verdana;
+    font-size: large;
+    font-weight: 500;
+}
+
+.botao{
+    height: 50px;
+    width: 150px;
+    border: 1px solid black;
+    user-select: none;
+    cursor: pointer;
+}
+
+.botao:hover{
+    background-color: antiquewhite;
+    transition: 1s;
+}
+
+.botao:active{
+    background-color: gray;
+    transition: 0s;
+}
