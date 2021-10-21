@@ -6,20 +6,20 @@ h1{
     font-family: verdana;
 }
 
-.botao{
+#botao{
     height: 50px;
-    width: 150px;
+    width: 100px;
     border: 1px solid black;
     user-select: none;
     cursor: pointer;
 }
 
-.botao:hover{
+#botao:hover{
     background-color: antiquewhite;
     transition: 1s;
 }
 
-.botao:active{
+#botao:active{
     background-color: gray;
     transition: 0s;
 }
