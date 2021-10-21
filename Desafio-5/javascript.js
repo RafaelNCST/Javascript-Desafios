@@ -1,13 +1,15 @@
 function clicar(){
     let distancia = prompt('Digite uma distância em metros (m)')
-    let resultado = document.getElementById('resultado').style.fontFamily = 'verdana';
+    let msg = document.getElementById('msg');
+    let resultado = document.getElementById('texto')
+    msg.innerHTML = 'Clique no botão acima para adicionar um novo valor'
     resultado.innerHTML = `A distância de ${distancia} metros, corresponde a...`
-    document.getElementById('Km').innerHTML = `${distancia/1000} quilômetros (Km)\n`
-    document.getElementById('Hm').innerHTML = `${distancia/100} hectômetros (Hm)\n`
-    document.getElementById('Dam').innerHTML = `${distancia/10} decâmetros (Dam)\n`
-    document.getElementById('dm').innerHTML = `${distancia*10} decímetros (dm)\n`
-    document.getElementById('cm').innerHTML = `${distancia*100} centímetros (cm)\n`
-    document.getElementById('mm').innerHTML = `${distancia*1000} milímetros (mm)`
+    document.getElementById('Km').innerHTML = `${(parseFloat(distancia.replace(',','.'))/1000).toLocaleString('pt-BR')} quilômetros (Km)\n`
+    document.getElementById('Hm').innerHTML = `${(parseFloat(distancia.replace(',','.'))/100).toLocaleString('pt-BR')} hectômetros (Hm)\n`
+    document.getElementById('Dam').innerHTML = `${(parseFloat(distancia.replace(',','.'))/10).toLocaleString('pt-BR')} decâmetros (Dam)\n`
+    document.getElementById('dm').innerHTML = `${(parseFloat(distancia.replace(',','.'))*10).toLocaleString('pt-BR')} decímetros (dm)\n`
+    document.getElementById('cm').innerHTML = `${(parseFloat(distancia.replace(',','.'))*100).toLocaleString('pt-BR')} centímetros (cm)\n`
+    document.getElementById('mm').innerHTML = `${(parseFloat(distancia.replace(',','.'))*1000).toLocaleString('pt-BR')} milímetros (mm)`
 }
 
 function evento(){
