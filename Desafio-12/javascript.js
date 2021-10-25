@@ -4,20 +4,22 @@ function clicar(){
     let resultado = document.getElementById('resultado');   
 
     resultado.innerHTML = `<h1>Analisando os valores informados<h1>`;
-    resultado.innerHTML += `O produto custava R$ ${precoant} e agora custa R$ ${precopost}`;
+    resultado.innerHTML += `O produto custava R$ ${parseFloat(precoant).toLocaleString('pt-BR')} e agora custa R$ ${parseFloat(precopost).toLocaleString('pt-BR')}<br>`;
     
-    if(precopost === precoant){
+    if(parseFloat(precopost) === parseFloat(precoant)){
         resultado.innerHTML += `<br>Não houve mudanças dos preços`;
     }
-    else if(precopost > precoant){
+    else{
+        if(parseFloat(precopost) < parseFloat(precoant)){
+            resultado.innerHTML += `<br>Hoje o produto está mais barato.<br>`;
+            resultado.innerHTML += `<br>O preço caiu R$ ${parseFloat(precoant-precopost)} em relação ao preço anterior.<br>`;
+            resultado.innerHTML += `<br>Uma variação de ${((parseFloat(precoant/precopost)-1)*100).toFixed(2)}% para baixo<br>`;
+        }
+    }
+        if(parseFloat(precopost) > parseFloat(precoant)){
         resultado.innerHTML += `<br>Hoje o produto está mais caro.<br>`;
         resultado.innerHTML += `<br>O preço subiu R$ ${parseFloat(precopost-precoant)} em relação ao preço anterior.<br>`;
-        resultado.innerHTML += `<br>Uma variação de ${(parseFloat(precopost/precoant)-1)*100}% para cima<br>`;
-    }
-    else if(precopost < precoant){
-        resultado.innerHTML += `<br>Hoje o produto está mais barato.<br>`;
-        resultado.innerHTML += `<br>O preço caiu R$ ${parseFloat(precopost-precoant)} em relação ao preço anterior.<br>`;
-        resultado.innerHTML += `<br>Uma variação de ${(parseFloat(precopost/precoant)-1)*100}% para baixo<br>`;
+        resultado.innerHTML += `<br>Uma variação de ${((parseFloat(precopost/precoant)-1)*100).toFixed(2)}% para cima<br>`;
     }
     
 }
