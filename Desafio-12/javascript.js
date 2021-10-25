@@ -12,13 +12,13 @@ function clicar(){
     else{
         if(parseFloat(precopost) < parseFloat(precoant)){
             resultado.innerHTML += `<br>Hoje o produto está mais barato.<br>`;
-            resultado.innerHTML += `<br>O preço caiu R$ ${parseFloat(precoant-precopost)} em relação ao preço anterior.<br>`;
+            resultado.innerHTML += `<br>O preço caiu R$ ${parseFloat(precoant-precopost).toLocaleString('pt-BR')} em relação ao preço anterior.<br>`;
             resultado.innerHTML += `<br>Uma variação de ${((parseFloat(precoant/precopost)-1)*100).toFixed(2)}% para baixo<br>`;
         }
     }
         if(parseFloat(precopost) > parseFloat(precoant)){
         resultado.innerHTML += `<br>Hoje o produto está mais caro.<br>`;
-        resultado.innerHTML += `<br>O preço subiu R$ ${parseFloat(precopost-precoant)} em relação ao preço anterior.<br>`;
+        resultado.innerHTML += `<br>O preço subiu R$ ${parseFloat(precopost-precoant).toLocaleString('pt-BR')} em relação ao preço anterior.<br>`;
         resultado.innerHTML += `<br>Uma variação de ${((parseFloat(precopost/precoant)-1)*100).toFixed(2)}% para cima<br>`;
     }
     
