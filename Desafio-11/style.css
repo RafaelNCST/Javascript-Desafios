@@ -1,0 +1,48 @@
+div{
+    text-align: center;
+}
+
+h1{
+    font-family: verdana;
+}
+
+#botao{
+    font-family: verdana;
+    height: 50px;
+    width: 100px;
+    border: 1px solid black;
+    user-select: none;
+    cursor: pointer;
+}
+
+#botao:hover{
+    background-color: antiquewhite;
+    transition: 1s;
+}
+
+#botao:active{
+    background-color: gray;
+    transition: 0s;
+}
+
+#resultado{
+    font-size: large;
+}
+
+#marca1{
+    background-color: rgb(166, 245, 166);
+    opacity: 0.8;
+}
+
+#marca2{
+    background-color: rgb(212, 90, 90);
+    opacity: 0.8;
+}
+
+#span1{
+    font-size: 20px
+}
+
+#span2{
+    font-size: 20px
+}
